@@ -71,7 +71,7 @@ app.get("/api/v1/getProduct:id", (req, res) => {
 
 app.post("/api/v1/updateProduct:id", (req, res) => {
   const userID = req.params.id;
-  Product.updateOne(
+  Product.update(
     { _id: userID },
     {
       Name: req.body.name,
